@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 
 int main() {
@@ -12,12 +13,17 @@ int main() {
         std::cin >> numbers[i];
     };
 
-    int average = (
-        (numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4])
+    float average = (
+        float (numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4])
         / 5
     );
 
-    std::cout << "La moyenne de ces nombres est " << average << std::endl;
+    std::cout
+    << std::fixed
+    << std::setprecision(2)
+    << "La moyenne de ces nombres est "
+    << average
+    << std::endl;
 
     return 0;
 }
