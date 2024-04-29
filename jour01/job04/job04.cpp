@@ -1,16 +1,29 @@
 #include <iostream>
+#include <iomanip>
 
 
 int main() {
-    int a = 0;
-    std::cout << "Veuillez donner un premier entier: ";
+    float a = 0;
+    std::cout << "Veuillez donner un premier nombre: ";
     std::cin >> a;
 
-    int b = 0;
-    std::cout << "Veuillez donner un deuxième entier: ";
+    float b = 0;
+    std::cout << "Veuillez donner un deuxième nombre: ";
     std::cin >> b;
 
-    std::cout << "La somme est égale à " << a + b << std::endl;
+    if ((a + b) == static_cast<int>(a + b)) {
+        std::cout
+        << "La somme est égale à "
+        << static_cast<int>(a + b)
+        << std::endl;
+    } else {
+        std::cout
+        << std::fixed
+        << std::setprecision(2)
+        << "La somme est égale à "
+        << a + b
+        << std::endl;
+    };
 
     return 0;
 }
