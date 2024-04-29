@@ -6,34 +6,39 @@ int main() {
     std::cout << "x = " << x << std::endl;
     std::cout << "y = " << y << std::endl;
 
-    // No need for parentheses here
+    // Pas besoin de parenthèses ici
     int a = x + 5;
     std::cout << "a = " << a << std::endl;
 
-    // we need parentheses here since we're re-assigning the value to
-    // x to that of y's
+    // On a besoin de parenthèses ici puisqu'on attribut une nouvelle
+    // valeur à x
     a = (x = y) + 2;
     std::cout << "a = " << a << std::endl;
 
-    // A comparison returns a boolean value of either 0 (false) or 1 (true)
+    // Une comparaison retourne une valeur booléenne de 0 (faux)
+    // ou de 1 (vrai)
     a = x == y;
     std::cout << "a = " << a << std::endl;
 
-    // If we actually want to check if two booleans are true with the
-    // logical AND operator, we would need to specify even further
-    // the order of operations by adding another parentheses around
-    // the whole thing
+    // Si nous souhaitons vérifier si deux booléens sont vrai avec
+    // l'opérateur AND logique, il faudrait qu'on spécifie encore plus
+    // l'ordre des opérations en mettant une parenthèse autour du calcul
+    // entier
     int b = 2;
     int c = 4;
     int d = 3;
-    std::cout << "(a < b) && (c < d) = " << ((a < b) && (c < d)) << std::endl;
+    std::cout
+    << "(a < b) && (c < d) = "
+    << ((a < b) && (c < d))
+    << std::endl;
 
     int i = 1;
     int n = 2;
     int p = 3;
-    // Parentheses are recommended in order to specify the order of
-    // operations, however since in the original expression it was
-    // i++, it only increments i after the operation
+    // Les parenthèses sont recommandées pour spécifier l'ordre
+    // des opérations.
+    // Aussi, dans l'expression originale, on incrémentait i avec
+    // i++, ce qui n'incrémente la variable qu'après l'opération
     std::cout << "(++i) * (n + p) = " << (++i) * (n + p) << std::endl;
 
     return 0;
