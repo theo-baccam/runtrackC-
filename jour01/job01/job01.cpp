@@ -5,11 +5,12 @@ int main() {
     char c = '\x01';
     short int p = 10;
 
-    // Chars are also an integer type whose value is associated to a
-    // character
-    // As long as an integer value is between -127 to 127 or between 0 and
-    // 255 then it can be assigned to a char variable;
-    // above 32 (unsigned), ascii values start being printable 
+    // Les chars sont un type integer dont la valeur est associé à un
+    // caractère.
+    // Tant qu'une valeur int est entre -127 à 127 ou 0 à 255 (unsigned),
+    // elle peut être assigné à une variable char
+    // Au dessus de 32 (unsigned), les caractères ascii commencent à être
+    // visibles
     int x = p + 3;
     char x_ = x;
     std::cout << x << " " << x_ << std::endl;
