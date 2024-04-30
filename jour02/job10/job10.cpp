@@ -57,18 +57,28 @@ double getApproximateRoot(double x, double initialGuess) {
 
 int main() {
     double n;
-    std::cout << "Donnez un nombre positif: ";
-    std::cin >> n;
+    while (1) {
+        std::cout << "Donnez un nombre positif: ";
+        std::cin >> n;
 
-    // Avec sqrt
-    std::cout << sqrt(n) << std::endl;
+        if (n == 0) {
+            break;
+        } else if (n < 0) {
+            std::cout << "Il faut que le nombre soit positif!" << std::endl;
+            continue;
+        };
+        
+        // Avec sqrt
+        std::cout << "cmath sqrt: " << sqrt(n) << std::endl;
 
-    // Avec mon algorithme
-    double previous = getPreviousPerfectSquareRoot(n);
-    double next = getNextPerfectSquareRoot(n);
-    double closest = getClosestPerfectRoot(n, previous, next);
-    double approximate = getApproximateRoot(n, closest);
-    std::cout << approximate << std::endl;
+        // Avec mon algorithme
+        double previous = getPreviousPerfectSquareRoot(n);
+        double next = getNextPerfectSquareRoot(n);
+        double closest = getClosestPerfectRoot(n, previous, next);
+        double approximate = getApproximateRoot(n, closest);
+        std::cout << "Mon algorithme: " << approximate << std::endl;
+    };
+
 
     return 0;
 }
