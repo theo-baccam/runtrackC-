@@ -13,16 +13,16 @@ int main() {
 
     if ((a * b) == static_cast<int>(a * b)) {
         std::cout
-        << "Le produit est égale à "
-        << static_cast<int>(a * b)
-        << std::endl;
+            << "Le produit est égale à "
+            << static_cast<int>(a * b)
+            << std::endl;
     } else {
         std::cout
-        << std::fixed
-        << std::setprecision(2)
-        << "Le produit est égale à "
-        << a * b
-        << std::endl;
+            << std::fixed
+            << std::setprecision(2)
+            << "Le produit est égale à "
+            << a * b
+            << std::endl;
     };
 
     return 0;
