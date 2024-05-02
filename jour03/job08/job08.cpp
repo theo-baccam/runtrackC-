@@ -18,13 +18,13 @@ int main() {
 
     int userInputLength = getStringLength(userInput);
 
-    char charArray[userInputLength + 1];
+    char tab[userInputLength + 1];
     for (int i = 0; i < userInputLength; i++) {
-        charArray[i] = userInput[i];
+        tab[i] = userInput[i];
     };
 
     std::cout << sizeof(userInput) / sizeof(char) << std::endl;
-    std::cout << sizeof(charArray) / sizeof(char) << std::endl;
+    std::cout << sizeof(tab) / sizeof(char) << std::endl;
 
     return 0;
 }
