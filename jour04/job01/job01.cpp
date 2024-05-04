@@ -2,8 +2,8 @@
 
 
 int main() {
-    int variable = 2019;
-    int *pointer = &variable;
+    int number = 2019;
+    int *pointer = &number;
 
     std::cout << *pointer << std::endl;
 }
