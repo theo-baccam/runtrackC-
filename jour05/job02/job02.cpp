@@ -1,5 +1,5 @@
 #include <iostream>
-#include "job01.hpp"
+#include "job02.hpp"
 
 
 Joueur::Joueur(double initialX, double initialY) {
