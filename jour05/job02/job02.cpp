@@ -2,13 +2,13 @@
 #include "job01.hpp"
 
 
-Joueur::~Joueur() {
-    std::cout << "Joueur detruit" << std::endl;
-}
-
-void Joueur::initialize(double initialX, double initialY) {
+Joueur::Joueur(double initialX, double initialY) {
     x = initialX;
     y = initialY;
+}
+
+Joueur::~Joueur() {
+    std::cout << "Joueur detruit" << std::endl;
 }
 
 void Joueur::setX(double newX) {
@@ -21,8 +21,7 @@ void Joueur::setY(double newY) {
 
 
 int main() {
-    Joueur johnDoe;;
-    johnDoe.initialize(32.58, -12.93);
+    Joueur johnDoe(32.58, -12.93);
     std::cout << johnDoe.x << " " << johnDoe.y << std::endl;
 
     johnDoe.setX(johnDoe.x + 1.5);
